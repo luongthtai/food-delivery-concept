@@ -1,0 +1,35 @@
+:root {
+    --colorTheme: #ffe145;
+    --yellowDark: #b79c10;
+    --yellowLight: #fff7cc;
+    --grayDark: #3f4255;
+    --graySecond: #9093a6;
+    --grayBg: #f2f4fa;
+    --garyLight: #d4d7e5;
+    --white: #fff;
+    --black: #000;
+
+    --fontFamily: "Martel Sans", sans-serif;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 58px;
+    line-height: 64px;
+
+    color: var(--grayDark);
+}
+
+h4 {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--grayDark);
+}
+
+p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    color: var(--grayDark);
+}

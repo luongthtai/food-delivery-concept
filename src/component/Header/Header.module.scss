@@ -1,0 +1,26 @@
+.root {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+
+    padding: 10px 5%;
+
+    border-bottom: 2px solid var(--garyLight);
+
+    #logo {
+        width: 15%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .listPage {
+        width: 18%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+}

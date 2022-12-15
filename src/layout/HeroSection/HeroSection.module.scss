@@ -1,0 +1,45 @@
+.root {
+    display: flex;
+
+    padding: 0 5%;
+
+    .content {
+        width: 50%;
+
+        transform: translateY(70px);
+
+        .ship {
+            display: grid;
+            grid-template: 1fr / 1fr 1fr;
+            gap: 20px;
+
+            width: 50%;
+
+            .shipper {
+                padding: 18px 10px;
+
+                text-align: center;
+
+                border-radius: 5px;
+                border: 2px solid var(--colorTheme);
+
+                p {
+                    margin: 0;
+                    font-size: 14px;
+                }
+
+                h4 {
+                    margin: 0
+                }
+            } 
+        }
+    }
+
+    image {
+        width: 50%;
+
+        img {
+            width: 100%;
+        }
+    }
+}

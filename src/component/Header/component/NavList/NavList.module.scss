@@ -1,0 +1,28 @@
+.navLists {
+    // display: none;
+    position: absolute;
+    float: right;
+    right: 0;
+
+    padding: 10px 20px;
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            border-bottom: 1px solid var(--garyLight);
+
+            padding: 10px;
+        }
+        #info {
+            display: flex;
+            gap: 10px;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+}

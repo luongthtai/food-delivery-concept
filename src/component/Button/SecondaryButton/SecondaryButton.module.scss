@@ -1,0 +1,28 @@
+.button {
+    color: var(--graySecond);
+
+    font-style: 16px;
+    font-weight: 700;
+
+    padding: 14px 24px;
+
+    border: none;
+    border-radius: 5px;
+
+    transition: .1s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--graySecond);
+        color: var(--grayDark);
+    }
+
+    &:active {
+        transform: scale(10%);
+    }
+
+    &:focus {
+        background-color: var(--graybg);
+        color: var(--garyLight);
+    }
+}
