@@ -1,6 +1,8 @@
 .root {
     display: flex;
 
+    position: relative;
+
     padding: 0 5%;
 
     .content {
@@ -29,17 +31,44 @@
                 }
 
                 h4 {
-                    margin: 0
+                    margin: 0;
                 }
-            } 
+            }
         }
     }
 
-    image {
+    .image {
         width: 50%;
 
-        img {
+        position: relative;
+
+        #product {
             width: 100%;
+        }
+        
+        img {
+            &:nth-child(2) {
+                position: absolute;
+                left: 0;
+                transform: translateX(-72%);
+                bottom: 15%;
+            }
+        }
+
+        #arrow {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            p {
+                letter-spacing: 0.5px;
+            }
         }
     }
 }

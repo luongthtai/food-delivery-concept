@@ -1,6 +1,9 @@
 import React from "react";
 import Photo from "../../assits/image/Photo-plate.png";
 import css from "./HeroSection.module.scss";
+import rucola from "../../assits/image/rucola-png.png"
+import arrow from "../../assits/image/arrow.png"
+import NavList from "../../component/Header/component/NavList/NavList";
 
 export default function HeroSection() {
   return (
@@ -20,8 +23,16 @@ export default function HeroSection() {
         </div>
       </div>
       <div className={css.image}>
-        <img src={Photo} alt="foot" />
+        <img src={Photo} id={css.product} alt="foot" />
+        <img src={rucola} alt="foot" />
+        <div id={css.arrow}>
+          <img src={arrow}  alt="arrow" />
+          <p>Fresh salad, Il Pasifigio</p>
+        </div>
       </div>
+
+      <NavList />
+
     </section>
   );
 }

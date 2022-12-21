@@ -1,0 +1,17 @@
+.titleSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+        color: var(--grayDark);
+    }
+
+    span {
+        font-weight: 300;
+        font-size: 36px;
+        line-height: 64px;
+
+        color: #313030;
+    }
+}

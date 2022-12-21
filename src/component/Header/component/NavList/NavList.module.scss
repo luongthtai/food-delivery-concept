@@ -1,10 +1,15 @@
 .navLists {
-    // display: none;
     position: absolute;
     float: right;
     right: 0;
 
+    background-color: var(--white);
+    height: 92vh;
+    width: 22%;
+
     padding: 10px 20px;
+
+    transition: 0.4s ease;
 
     ul {
         list-style-type: none;
@@ -12,10 +17,27 @@
         margin: 0;
 
         li {
-            border-bottom: 1px solid var(--garyLight);
+            cursor: pointer;
+            border-bottom: 1px solid var(--grayLight);
+            color: var(--graySecond);
+
+            font-weight: 700;
 
             padding: 10px;
+            transition: .4s;
+
+            &:hover {
+                transform: translateX(10px);
+                transition: .4s;
+            }
+
+            #phone {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 20px;
+            }
         }
+
         #info {
             display: flex;
             gap: 10px;
@@ -23,6 +45,30 @@
             p {
                 margin: 0;
             }
+        }
+    }
+
+    #language {
+        cursor: pointer;
+
+        float: right;
+        padding-top: 25px;
+
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        font-weight: 800;
+        font-size: 12px;
+        line-height: 16px;
+
+        color: var(--graySecond);
+
+        div {
+            display: flex;
+            align-items: center;
+
+            transition: .5s;
         }
     }
 }
