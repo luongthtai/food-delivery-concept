@@ -1,0 +1,16 @@
+#USPSection {
+    padding: 5% 22%;
+
+    margin-top: 5%;
+
+    background-image: url(../../assits/image/USPbg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr 1fr;
+
+    @media only screen and (max-width: 1024px) {
+        padding: 5% 8%;
+    }
+}

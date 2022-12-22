@@ -12,6 +12,13 @@
         font-size: 36px;
         line-height: 64px;
 
-        color: #313030;
+        color: var(--graySecond);
+
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+
+            transition: .3s;
+        }
     }
 }

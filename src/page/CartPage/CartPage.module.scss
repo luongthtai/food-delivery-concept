@@ -1,7 +1,52 @@
 .CartPage {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     text-decoration: none;
     color: var(--graySecond);
+    position: relative;
+
+    width: 70px;
+
+    transition: .4s;
+
+    svg {
+        transition: .4s;
+    }
+
+    &:hover {
+        border-radius: 5px;
+
+        background-color: var(--colorTheme);
+
+        span {
+            position: absolute;
+            top: 0;
+            right: -5px;
+            transform: translateY(-50%);
+
+            background-color: red;
+            color: var(--white);
+
+            width: 25px;
+            height: 25px;
+
+            font-size: 12px;
+
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        svg {
+
+            width: 30px;
+            height: 30px;
+
+            color: var(--garyLight);
+        }
+    }
 }

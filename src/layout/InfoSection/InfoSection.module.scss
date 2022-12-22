@@ -1,0 +1,29 @@
+#infoSection {
+    padding: 5%;
+
+    #infoImage {
+        display: grid;
+
+        grid-template: 1fr / 1fr 1fr 1fr 1fr;
+        justify-content: space-between;
+        gap: 20px;
+
+        div {
+            overflow: hidden;
+            cursor: pointer;
+            
+            &:hover {
+                img {
+                    transform: scale(1.2);
+                }
+            }
+            
+            img {
+                width: 100%;
+                display: block;
+
+                transition: .3s;
+            }
+        }
+    }
+}
