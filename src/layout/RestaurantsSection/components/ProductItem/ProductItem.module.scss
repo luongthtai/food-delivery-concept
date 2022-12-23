@@ -1,0 +1,46 @@
+#productItem {
+    border-radius: 5px;
+    overflow: hidden;
+
+    #image {
+        overflow: hidden;
+        border-radius: 6px 6px 0 0;
+
+        img {
+            width: 100%;
+            display: block;
+
+            transition: 0.3s;
+
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    #infoProduct {
+        padding: 5% 8%;
+
+        background-color: var(--bgWeb);
+
+        border-radius: 0 0 6px 6px;
+
+        display: flex;
+        justify-content: space-between;
+
+        h3 {
+            margin: 0;
+        }
+
+        svg {
+            margin-top: 8px;
+
+            width: 20px;
+            height: 20px;
+
+            transition: .2s;
+        }
+    }
+}

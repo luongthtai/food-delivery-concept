@@ -22,7 +22,7 @@ export default function Specialities() {
     slidesToScroll: 1,
     initialSlide: 4,
     arrows: true,
-    infinite: false,
+    infinite: true,
     accessibility: true,
     nextArrow: <BsArrowRightShort />,
     prevArrow: <BsArrowLeftShort />,
