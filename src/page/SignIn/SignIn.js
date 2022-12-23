@@ -1,15 +1,14 @@
 import React, { useState } from "react";
-import css from "./LoginPage.module.scss";
-import Logo from "../../assits/image/Logo.png";
-import svg from "../../assits/image/delivery.svg";
+import css from "./SignIn.module.scss";
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import Footer from "../../component/Footer/Footer";
+import svg from "../../assits/image/delivery.svg";
+import Logo from "../../assits/image/Logo.png";
 import PrimaryButton from "../../component/Button/PrimaryButton/PrimaryButton";
 import { Link } from "react-router-dom";
-import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 
-export default function LoginPage() {
+export default function SignIn() {
   const [pass, setPass] = useState(false);
-  const [rePass, setRePass] = useState(false);
 
   return (
     <>
@@ -37,7 +36,7 @@ export default function LoginPage() {
 
         <div id={css.form}>
           <form>
-            <h1>TẠO TÀI KHOẢN</h1>
+            <h1>ĐĂNG NHẬP</h1>
 
             <input type="email" placeholder="Email" />
 
@@ -48,30 +47,16 @@ export default function LoginPage() {
               </div>
             </div>
 
-            <div id={css.input}>
-              <input
-                type={rePass ? "text" : "password"}
-                placeholder="Xác Nhận Lại Mật Khẩu"
-              />
-              <div onClick={() => setRePass(!rePass)}>
-                {rePass ? <AiOutlineEye /> : <AiOutlineEyeInvisible />}
-              </div>
+            <div id={css.forgot}>
+              <p>Quên mật khẩu ?</p>
             </div>
 
-            <div id={css.check}>
-              <input type="checkbox" id="check" />
-              <label htmlFor="check">
-                Tôi đã đọc và đồng ý với các{" "}
-                <a href="/check">Chính Sách Hoạt Động của GreenKitchen</a>
-              </label>
-            </div>
-
-            <PrimaryButton text="Đăng Ký" />
+            <PrimaryButton text="Đăng Nhập" />
           </form>
 
           <div id={css.signIn}>
             <p>
-              Bạn đã có tài khoản ? <Link to="/signIn">Đăng nhập</Link>
+              Bạn đã có tài khoản chưa ? <Link to="/login">Đăng Ký</Link>
             </p>
           </div>
         </div>

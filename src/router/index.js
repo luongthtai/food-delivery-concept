@@ -1,8 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import HomePage from "../layout/HomePage";
-import LoginPage from "../page/LoginPage/LoginPage";
 import ErrorPage from "../page/ErrorPage/ErrorPage";
 import CartPage from "../page/CartPage/CartPage";
+import LoginPage from "../page/LoginPage/LoginPage";
+import SignIn from "../page/SignIn/SignIn";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
     path: "cartPage",
     element: <CartPage />,
   },
+  {
+    path: "signIn",
+    element: <SignIn />
+  }
 ]);
 
 export default router;

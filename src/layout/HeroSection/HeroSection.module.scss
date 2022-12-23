@@ -27,6 +27,10 @@
                 border-radius: 5px;
                 border: 2px solid var(--colorTheme);
 
+                cursor: pointer;
+
+                transition: .3s;
+
                 p {
                     margin: 0;
                     font-size: 14px;
@@ -34,6 +38,12 @@
 
                 h4 {
                     margin: 0;
+                }
+
+                &:hover {
+                    transform: scale(1.2);
+
+                    background-color: var(--colorTheme);
                 }
             }
         }
@@ -47,15 +57,38 @@
         #product {
             width: 100%;
 
-            animation: rotate 10s infinite alternate-reverse;
+            animation: rotate 30s infinite forwards;
 
             @keyframes rotate {
-                from {
+                to {
                     transform: rotate(0);
                 }
-                to {
-                    transform: rotate(380deg);
+
+                from {
+                    transform: rotate(-360deg);
                 }
+
+                // 0% {
+                //     transform: translateX(0) rotate(0);
+                // }
+
+                // 45% {
+                //     transform: translateX(-220%) rotate(-180deg);
+                // }
+
+                // 46% {
+                //     visibility: collapse;
+                // }
+
+                // 75% {
+                //     visibility: collapse;
+                //     transform: translateX(120%) rotate(-180deg);
+                // }
+                
+                // 100% {
+                //     visibility: initial;
+                //     transform: translateX(0) rotate(-380deg);
+                // }
             }
         }
         

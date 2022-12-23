@@ -1,10 +1,10 @@
 import React from "react";
 import css from "./Header.module.scss";
 import Logo from "../../assits/image/Logo.png";
-import LoginPage from "../../page/LoginPage/LoginPage";
 import Nav from "./component/Navbar/NavBar";
 import { Link } from "react-router-dom";
-import CartPage from "../../page/CartPage/CartPage";
+import LoginIcon from "../LoginIcon/LoginIcon";
+import CartIcon from "../CartIcon/CartIcon";
 
 export default function Header() {
   return (
@@ -14,8 +14,8 @@ export default function Header() {
       </Link>
 
       <div className={css.listPage}>
-        <LoginPage />
-        <CartPage />
+        <LoginIcon />
+        <CartIcon />
         <Nav />
       </div>
     </header>

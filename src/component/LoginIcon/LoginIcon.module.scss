@@ -1,0 +1,32 @@
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    width: 110px;
+    
+    text-decoration: none;
+
+    color: var(--graySecond);
+
+    transition: .3s;
+    
+    &:hover {
+        span {
+            display: none;
+        }
+        
+        svg {
+            transition: .4s;
+
+            width: 30px;
+            height: 30px;
+
+            border-radius: 50%;
+
+            background-color: var(--colorTheme);
+            color: var(--garyLight);
+        }
+    }
+}

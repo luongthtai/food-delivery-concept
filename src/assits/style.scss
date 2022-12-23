@@ -12,6 +12,7 @@
     --heartColor: red;
 
     --fontFamily: "Martel Sans", sans-serif;
+    --fontFamily2: 'Poppins', sans-serif;
 }
 
 h1 {
@@ -20,6 +21,8 @@ h1 {
     line-height: 64px;
 
     color: var(--grayDark);
+
+    font-family: var(--fontFamily2)
 }
 
 h2 {
@@ -28,12 +31,16 @@ h2 {
     line-height: 64px;
 
     margin: 0;
+
+    font-family: var(--fontFamily2)
 }
 
 h4 {
     font-weight: 700;
     font-size: 18px;
     color: var(--grayDark);
+
+    font-family: var(--fontFamily2)
 }
 
 p {

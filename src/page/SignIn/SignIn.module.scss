@@ -1,10 +1,18 @@
 #loginPage {
-    height: 100vh;
-
     display: flex;
     padding: 5%;
 
     background-image: url(../../assits//image/BGLogin.png);
+
+    height: 100vh;
+
+    @media only screen and (max-width: 1024px) {
+        height: auto;
+
+        flex-direction: column;
+
+        padding: 10% 5%;
+    }
 
     #loginContent {
         width: 50%;
@@ -14,10 +22,24 @@
         justify-content: center;
         gap: 20px;
 
+        @media only screen and (max-width: 1024px) {
+            width: 100%;
+
+            padding: 5% 10%;
+
+            align-items: center;
+        }
+
         #logo {
             width: 55%;
 
             margin-left: 20px;
+
+            @media only screen and (max-width: 1024px) {
+                width: 45%;
+
+                margin: 0;
+            }
         }
 
         .root {
@@ -26,7 +48,7 @@
             gap: 10px;
 
             div {
-                display: flex;
+                display: flex; 
                 align-items: center;
                 gap: 5px;
 
@@ -38,6 +60,10 @@
                     line-height: 32px;
                 }
             }
+
+            @media only screen and (max-width: 1024px) {
+                display: none;
+            }
         }
     }
 
@@ -48,6 +74,14 @@
         background-color: var(--white);
 
         border-radius: 20px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        @media only screen and (max-width: 1024px) {
+            width: 100%;
+        }
 
         form {
             width: 100%;
@@ -92,41 +126,31 @@
                 border: 1px solid #000;
                 border-radius: 5px;
 
-                padding: 8px 15px;
+                padding: 10px 15px;
 
                 outline: none;
+
+                font-style: 24px;
 
                 div {
                     width: 100%;
                 }
             }
 
-            #check {
-                display: flex;
-                align-items: center;
-                gap: 5px;
+            #forgot {
+                width: 100%;
+                text-align: end;
 
-                input {
-                    width: auto;
-                    margin: 0;
+                p {
+                    font-weight: 300;
+                    font-size: 20px;
+                    line-height: 32px;
                 }
-
-                a {
-                    text-decoration: none;
-                    color: rgba(67, 107, 36, 1);
-                    font-weight: 700;
-                }
-            }
-
-            input::-webkit-outer-spin-button,
-            input::-webkit-inner-spin-button {
-                -webkit-appearance: none;
-                margin: 0;
             }
         }
 
         #signIn {
-            padding-top: 20px;
+            padding-top: 30px;
 
             a {
                 text-decoration: none;
