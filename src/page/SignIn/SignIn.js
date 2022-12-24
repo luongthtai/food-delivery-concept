@@ -78,7 +78,7 @@ export default function SignIn() {
         </div>
       </section>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
