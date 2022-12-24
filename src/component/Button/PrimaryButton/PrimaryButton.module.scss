@@ -13,12 +13,18 @@
     cursor: pointer;
     transition: 0.1s;
 
+    @media only screen and (max-width: 430px) {
+        width: 100%;
+        
+        padding: 5px;
+    }
+
     &:hover {
         background-color: var(--yellowLight);
     }
 
     &:active {
-        transform: scale(10%);
+        transform: scale(.9);
     }
 
     &:focus {

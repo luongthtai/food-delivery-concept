@@ -5,12 +5,36 @@
 
     display: flex;
 
+    @media only screen and (max-width: 768px) {
+        flex-direction: column;       
+    }
+
+    @media only screen and (max-width: 430px) {
+        padding: 5% 4%;               
+    }
+
     .findRearestContent {
         padding-right: 5%;
         width: 50%;
 
+        @media only screen and (max-width: 768px) {
+            width: 100%;   
+            text-align: center;
+            margin-bottom: 20px;
+
+            padding-right: 0;
+        }
+
         h2 {
             margin-bottom: 20px;
+
+            @media only screen and (max-width: 1024px) {
+                line-height: normal;
+            }
+
+            @media only screen and (max-width: 768px) {
+                margin-bottom: 10px;
+            }
         }
     }
 
@@ -20,6 +44,14 @@
         display: flex;
         align-items: center;
         gap: 5px;
+        
+        @media only screen and (max-width: 768px) {
+            width: 100%;   
+        }
+
+        @media only screen and (max-width: 430px) {
+            flex-direction: column;           
+        }
 
         #input {
             width: 100%;
@@ -42,27 +74,11 @@
                     border: none;
                     outline: none;
                 }
-            }
 
-            #placehoder {
-                padding: 0 20px;
-
-                border-radius: 5px 5px 0 0;
-
-                transition: 0.4s;
-
-                display: flex;
-                align-items: center;
-                justify-content: flex-start;
-                gap: 5px;
-
-                position: absolute;
-                top: 50%;
-                left: 10px;
-                transform: translateY(-50%);
-
-                color: var(--graySecond);
-                font-weight: 300;
+                @media only screen and (max-width: 430px) {
+                    padding: 10px 18px;
+                    font-size: 12px;
+                }
             }
         }
     }

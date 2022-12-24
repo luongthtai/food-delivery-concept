@@ -9,10 +9,16 @@ import MapSection from "./Map/MapSection";
 import InfoSection from "./InfoSection/InfoSection";
 import USPSection from "./USPSection/USPSection";
 import Specialities from "./Specialities/Specialities";
+import { useSelector } from "react-redux";
+import { Navigate } from "react-router-dom";
 
 export default function HomePage() {
+  const isLogin = useSelector((state) => state.user.login);
+
   return (
     <>
+      {isLogin ? "" : <Navigate to="signIn" />}
+
       <section>
         <Header />
         <HeroSection />

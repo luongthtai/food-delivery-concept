@@ -5,9 +5,9 @@ import css from "./LoginIcon.module.scss";
 
 export default function LoginIcon() {
   return (
-    <Link to="login" className={css.login}>
+    <Link to="" className={css.login}>
         <HiOutlineUser />
-        <span>Log In</span>
+        <span>User</span>
     </Link>
   )
 }

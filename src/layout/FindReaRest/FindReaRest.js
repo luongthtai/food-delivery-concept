@@ -15,10 +15,10 @@ export default function FindReaRest() {
 
       <form>
         <div id={css.input}>
-          <input type="text" required placeholder="	&#xf3c5; Enter delivery address"/>
+          <input type="text" required placeholder="Enter delivery address"/>
         </div>
 
-        <PrimaryButton text="send" />                
+        <PrimaryButton text="send"/>                
       </form>
     </section>
   );

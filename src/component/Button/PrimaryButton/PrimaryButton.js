@@ -1,8 +1,11 @@
-import React from 'react'
-import css from "./PrimaryButton.module.scss"
+import React from "react";
+import css from "./PrimaryButton.module.scss";
 
-export default function PrimaryButton({text}) {
+export default function PrimaryButton({ text, submit, color, padding }) {
+
   return (
-    <button type='submit' className={css.button}>{text}</button>
-  )
+    <button type="button" className={css.button} onClick={submit} style={{backgroundColor: color, padding: padding}}>
+      {text}
+    </button>
+  );
 }

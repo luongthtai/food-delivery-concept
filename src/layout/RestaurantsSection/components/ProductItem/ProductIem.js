@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import css from "./ProductItem.module.scss";
 import { BsHeartFill } from "react-icons/bs";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
 export default function ProductItem({ image, nameProduct, price }) {
-  const [heart, setHeart] = useState(false)
+  const [heart, setHeart] = useState(false);
 
   return (
     <div id={css.productItem}>
@@ -17,7 +18,14 @@ export default function ProductItem({ image, nameProduct, price }) {
           <p>${price}</p>
         </div>
 
-        <BsHeartFill style={{color: heart ? "var(--heartColor)" : ""}} onClick={() => setHeart(!heart)}/>
+        <BsHeartFill
+          style={{ color: heart ? "var(--heartColor)" : "" }}
+          onClick={() => setHeart(!heart)}
+        />
+      </div>
+
+      <div id={css.buy}>
+        <AiOutlineShoppingCart />
       </div>
     </div>
   );

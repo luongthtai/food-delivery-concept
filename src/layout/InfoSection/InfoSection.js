@@ -14,18 +14,23 @@ export default function InfoSection() {
       <div id={css.infoImage}>
         <div>
           <img src={info1} alt="info1" />
+
+          <a href="/">#Instagram</a>
         </div>
 
         <div>
           <img src={info2} alt="info1" />
+          <a href="/">#Instagram</a>
         </div>
         
         <div>
           <img src={info3} alt="info1" />
+          <a href="/">#Instagram</a>
         </div>
         
         <div>
           <img src={info4} alt="info1" />
+          <a href="/">#Instagram</a>
         </div>
       </div>
     </section>

@@ -11,6 +11,10 @@
 
     transition: .4s;
 
+    @media only screen and (max-width: 430px) {
+        width: auto;               
+    }
+
     svg {
         transition: .4s;
     }

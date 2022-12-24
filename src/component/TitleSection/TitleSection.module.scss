@@ -5,6 +5,10 @@
 
     h2 {
         color: var(--grayDark);
+
+        @media only screen and (max-width: 768px) {
+            font-size: 30px;
+        }
     }
 
     span {
@@ -13,6 +17,10 @@
         line-height: 64px;
 
         color: var(--graySecond);
+
+        @media only screen and (max-width: 768px) {
+            font-size: 30px;
+        }
 
         &:hover {
             text-decoration: underline;

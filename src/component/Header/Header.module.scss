@@ -17,6 +17,10 @@
         img {
             width: 100%;
         }
+
+        @media only screen and (max-width: 768px) {
+            width: 50%;
+        }
     }
 
     .listPage {
@@ -25,5 +29,11 @@
         justify-content: space-between;
         align-items: center;
         gap: 20px;
+
+        @media only screen and (max-width: 1024px) {
+            width: 50%;
+
+            justify-content: end;
+        } 
     }
 }

@@ -4,7 +4,18 @@
     display: flex;
     padding: 5%;
 
-    background-image: url(../../assits//image/BGLogin.png);
+    // background-image: url(../../assits//image/BGLogin.png);
+
+    background-color: var(--bgWeb);
+
+    @media only screen and (max-width: 1024px) {
+        height: auto;
+
+        flex-direction: column;
+
+        padding: 10% 5%;
+    }
+
 
     #loginContent {
         width: 50%;
@@ -14,10 +25,24 @@
         justify-content: center;
         gap: 20px;
 
+        @media only screen and (max-width: 1024px) {
+            width: 100%;
+
+            padding: 5% 10%;
+
+            align-items: center;
+        }
+
         #logo {
             width: 55%;
 
             margin-left: 20px;
+
+            @media only screen and (max-width: 1024px) {
+                width: 45%;
+
+                margin: 0;
+            }
         }
 
         .root {
@@ -38,6 +63,10 @@
                     line-height: 32px;
                 }
             }
+
+            @media only screen and (max-width: 1024px) {
+                display: none;
+            }
         }
     }
 
@@ -48,6 +77,12 @@
         background-color: var(--white);
 
         border-radius: 20px;
+        
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+        @media only screen and (max-width: 1024px) {
+            width: 100%;
+        }
 
         form {
             width: 100%;
@@ -70,6 +105,14 @@
                 line-height: 32px;
             }
 
+            #email {
+                position: absolute;
+                color: red;
+                left: 10px;
+                font-size: 12px;
+                font-weight: 700;
+            }
+
             #input {
                 position: relative;
 
@@ -84,15 +127,23 @@
 
                     color: #000;
                 }
+
+                p {
+                    position: absolute;
+                    color: red;
+                    left: 10px;
+                    font-size: 12px;
+                    font-weight: 700;
+                }
             }
 
             input {
                 width: 100%;
 
-                border: 1px solid #000;
+                border: none;
                 border-radius: 5px;
 
-                padding: 8px 15px;
+                padding: 10px 15px;
 
                 outline: none;
 

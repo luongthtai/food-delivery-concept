@@ -1,7 +1,7 @@
 .button {
     color: var(--graySecond);
 
-    font-style: 16px;
+    font-size: 16px;
     font-weight: 700;
 
     padding: 14px 24px;
@@ -11,6 +11,10 @@
 
     transition: .1s;
     cursor: pointer;
+
+    @media only screen and (max-width: 768px) {
+        padding: 5px 20px;
+    }
 
     &:hover {
         background-color: var(--graySecond);

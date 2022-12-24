@@ -11,6 +11,41 @@ import Product4 from "../../assits/image/product4.png"
 import ProductItem from "./components/ProductItem/ProductIem";
 
 export default function RestaurantsSection() {
+  const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
+    <button
+      {...props}
+      className={
+        "slick-prev" +
+        (currentSlide === 0 ? " slick-disabled" : "")
+      }
+
+      style={{display: "flex", justifyContent: "center", alignItems: "center"}}
+
+      aria-hidden="true"
+      aria-disabled={currentSlide === 0 ? true : false}
+      type="button"
+    >
+      <BsArrowLeftShort style={{fontSize: "35px"}}/>
+    </button>
+  );
+  
+  const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
+    <button
+      {...props}
+      className={
+        "slick-next" +
+        (currentSlide === slideCount - 1 ? " slick-disabled" : "")
+      }
+      style={{display: "flex", justifyContent: "center", alignItems: "center"}}
+
+      aria-hidden="true"
+      aria-disabled={currentSlide === slideCount - 1 ? true : false}
+      type="button"
+    >
+      <BsArrowRightShort style={{fontSize: "35px"}} />
+    </button>
+  );
+
   const settings = {
     className: "section-outstanding__slider",
     slidesToShow: 4,
@@ -19,11 +54,11 @@ export default function RestaurantsSection() {
     arrows: true,
     accessibility: true,
     infinite: true,
-    nextArrow: <BsArrowRightShort />,
-    prevArrow: <BsArrowLeftShort />,
+    nextArrow: <SlickArrowRight />,
+    prevArrow: <SlickArrowLeft />,
     responsive: [
       {
-        breakpoint: 576,
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -33,7 +68,7 @@ export default function RestaurantsSection() {
         breakpoint: 375,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
         },
       },
     ],

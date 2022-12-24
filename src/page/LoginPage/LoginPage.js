@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import css from "./LoginPage.module.scss";
 import Logo from "../../assits/image/Logo.png";
 import svg from "../../assits/image/delivery.svg";
@@ -6,10 +6,40 @@ import Footer from "../../component/Footer/Footer";
 import PrimaryButton from "../../component/Button/PrimaryButton/PrimaryButton";
 import { Link } from "react-router-dom";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import { useDispatch } from "react-redux";
 
 export default function LoginPage() {
   const [pass, setPass] = useState(false);
   const [rePass, setRePass] = useState(false);
+
+  const [config, setConfig] = useState(false);
+
+  const [user, setUser] = useState({
+    email: null,
+    password: null,
+    configPass: null,
+  });
+
+  const dispatch = useDispatch()
+
+  const handleChage = (e) => {
+    setUser({
+      ...user,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  useEffect(() => {
+    if (user.password === user.configPass) {
+      setConfig(true);
+    } else {
+      setConfig(false);
+    }
+  }, [user]);
+
+  const handleSubmit = () => {
+    dispatch()
+  };
 
   return (
     <>
@@ -38,35 +68,58 @@ export default function LoginPage() {
         <div id={css.form}>
           <form>
             <h1>TẠO TÀI KHOẢN</h1>
-
-            <input type="email" placeholder="Email" />
-
-            <div id={css.input}>
-              <input type={pass ? "text" : "password"} placeholder="Mật Khẩu" />
-              <div onClick={() => setPass(!pass)}>
-                {pass ? <AiOutlineEye /> : <AiOutlineEyeInvisible />}
-              </div>
+            <div>
+              <input
+                name="email"
+                type="email"
+                onChange={handleChage}
+                placeholder="Email"
+              />
+              {/* <p id={css.email}>{email ? "" : "ko dung dinh dang"}</p> */}
             </div>
 
             <div id={css.input}>
               <input
+                name="password"
+                type={pass ? "text" : "password"}
+                onChange={handleChage}
+                placeholder="Mật Khẩu"
+                required
+              />
+              <div onClick={() => setPass(!pass)}>
+                {pass ? <AiOutlineEye /> : <AiOutlineEyeInvisible />}
+              </div>
+              {/* <p id={css.error}>error</p> */}
+            </div>
+
+            <div id={css.input}>
+              <input
+                name="configPass"
                 type={rePass ? "text" : "password"}
                 placeholder="Xác Nhận Lại Mật Khẩu"
+                onChange={handleChage}
+                required
               />
               <div onClick={() => setRePass(!rePass)}>
                 {rePass ? <AiOutlineEye /> : <AiOutlineEyeInvisible />}
               </div>
+              <p
+                id={css.error}
+                style={{ visibility: config ? "hidden" : "initial" }}
+              >
+                Mat khau chua dung
+              </p>
             </div>
 
             <div id={css.check}>
-              <input type="checkbox" id="check" />
+              <input type="checkbox" id="check" required />
               <label htmlFor="check">
                 Tôi đã đọc và đồng ý với các{" "}
                 <a href="/check">Chính Sách Hoạt Động của GreenKitchen</a>
               </label>
             </div>
 
-            <PrimaryButton text="Đăng Ký" />
+            <PrimaryButton text="Đăng Ký" submit={() => handleSubmit()} padding="12px" />
           </form>
 
           <div id={css.signIn}>

@@ -16,6 +16,41 @@ import Pasta from "../../assits/image/raviolli.svg";
 import {BsArrowRightShort, BsArrowLeftShort} from "react-icons/bs"
 
 export default function Specialities() {
+  const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
+    <button
+      {...props}
+      className={
+        "slick-prev" +
+        (currentSlide === 0 ? " slick-disabled" : "")
+      }
+
+      style={{display: "flex", justifyContent: "center", alignItems: "center"}}
+
+      aria-hidden="true"
+      aria-disabled={currentSlide === 0 ? true : false}
+      type="button"
+    >
+      <BsArrowLeftShort style={{fontSize: "35px"}}/>
+    </button>
+  );
+  
+  const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
+    <button
+      {...props}
+      className={
+        "slick-next" +
+        (currentSlide === slideCount - 1 ? " slick-disabled" : "")
+      }
+      style={{display: "flex", justifyContent: "center", alignItems: "center"}}
+
+      aria-hidden="true"
+      aria-disabled={currentSlide === slideCount - 1 ? true : false}
+      type="button"
+    >
+      <BsArrowRightShort style={{fontSize: "35px"}} />
+    </button>
+  );
+
   const settings = {
     className: "section-outstanding__slider",
     slidesToShow: 8,
@@ -24,8 +59,8 @@ export default function Specialities() {
     arrows: true,
     infinite: true,
     accessibility: true,
-    nextArrow: <BsArrowRightShort />,
-    prevArrow: <BsArrowLeftShort />,
+    nextArrow: <SlickArrowRight />,
+    prevArrow: <SlickArrowLeft />,
     responsive: [
       {
         breakpoint: 1024,

@@ -5,13 +5,25 @@ import Footer from "../../component/Footer/Footer";
 import svg from "../../assits/image/delivery.svg";
 import Logo from "../../assits/image/Logo.png";
 import PrimaryButton from "../../component/Button/PrimaryButton/PrimaryButton";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
+import { loginUser } from "../../redux/reduce/user";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function SignIn() {
   const [pass, setPass] = useState(false);
 
+  const dispatch = useDispatch();
+
+  const isLogin = useSelector((state) => state.user.login);
+
+  const isLogins = () => {
+    dispatch(loginUser());
+  };
+
   return (
     <>
+      {isLogin ? <Navigate to="/" /> : ""}
+
       <section id={css.loginPage}>
         <div id={css.loginContent}>
           <img src={Logo} alt="logo" id={css.logo} />
@@ -51,7 +63,11 @@ export default function SignIn() {
               <p>Quên mật khẩu ?</p>
             </div>
 
-            <PrimaryButton text="Đăng Nhập" />
+            <PrimaryButton
+              text="Đăng Nhập"
+              padding="12px"
+              submit={() => isLogins()}
+            />
           </form>
 
           <div id={css.signIn}>

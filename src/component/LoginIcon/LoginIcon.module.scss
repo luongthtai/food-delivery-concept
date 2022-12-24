@@ -12,6 +12,9 @@
 
     transition: .3s;
     
+    @media only screen and (max-width: 430px) {
+        width: auto;                
+    }
     &:hover {
         span {
             display: none;

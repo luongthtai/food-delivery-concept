@@ -7,10 +7,21 @@
 
     overflow: hidden;
 
+    @media only screen and (max-width: 1024px) {
+        flex-direction: column;
+    }
+
     .content {
         width: 50%;
 
         transform: translateY(70px);
+
+        @media only screen and (max-width: 1024px) {
+            width: 100%;
+            transform: translateY(0);
+
+            text-align: center;
+        }
 
         .ship {
             display: grid;
@@ -18,6 +29,11 @@
             gap: 20px;
 
             width: 50%;
+
+            @media only screen and (max-width: 1024px) {
+                width: 100%;
+                padding: 0 2%;
+            }
 
             .shipper {
                 padding: 18px 10px;
@@ -29,7 +45,11 @@
 
                 cursor: pointer;
 
-                transition: .3s;
+                transition: 0.3s;
+
+                @media only screen and (max-width: 430px) {
+                    padding: 6px 10px;
+                }
 
                 p {
                     margin: 0;
@@ -54,10 +74,27 @@
 
         position: relative;
 
+        @media only screen and (max-width: 1024px) {
+            width: 100%;
+
+            padding: 5% 0;
+
+            display: flex;
+            justify-content: center;
+        }
+
+        @media only screen and (max-width: 430px) {
+            display: none;   
+        }
+
         #product {
             width: 100%;
 
             animation: rotate 30s infinite forwards;
+
+            @media only screen and (max-width: 1024px) {
+                width: 50%;
+            }
 
             @keyframes rotate {
                 to {
@@ -84,20 +121,26 @@
                 //     visibility: collapse;
                 //     transform: translateX(120%) rotate(-180deg);
                 // }
-                
+
                 // 100% {
                 //     visibility: initial;
                 //     transform: translateX(0) rotate(-380deg);
                 // }
             }
         }
-        
+
         img {
             &:nth-child(2) {
                 position: absolute;
                 left: 0;
                 transform: translateX(-72%);
                 bottom: 15%;
+
+                @media only screen and (max-width: 1024px) {
+                    transform: translateX(55%);
+
+                    bottom: 0;
+                }
             }
         }
 
@@ -111,6 +154,10 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
+
+            @media only screen and (max-width: 1024px) {
+                right: 16%;
+            }
 
             p {
                 letter-spacing: 0.5px;

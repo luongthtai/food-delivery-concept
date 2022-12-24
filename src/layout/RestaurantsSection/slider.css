@@ -103,10 +103,16 @@
     background-color: var(--white);
 
     box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 svg {
     color: var(--graySecond);
+    font-size: 18px;
 }
 
 .slick-prev {
