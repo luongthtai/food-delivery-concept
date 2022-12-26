@@ -5,4 +5,27 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    background-color: var(--bgWeb);
+
+    button {
+        padding: 10px 25px;
+
+        border: none;
+        border-radius: 5px;
+
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+
+        background-color: var(--white);
+
+        font-weight: 700;
+
+        cursor: pointer;
+
+        transition: .3s;
+
+        &:hover {
+            background-color: var(--colorTheme);
+        }
+    }
 }

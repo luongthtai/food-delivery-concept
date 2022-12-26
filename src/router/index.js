@@ -1,27 +1,40 @@
 import { createBrowserRouter } from "react-router-dom";
-import HomePage from "../layout/HomePage";
+// import HomePage from "../layout/HomePage";
 import ErrorPage from "../page/ErrorPage/ErrorPage";
-import CartPage from "../page/CartPage/CartPage";
+// import CartPage from "../page/CartPage/CartPage";
 import LoginPage from "../page/LoginPage/LoginPage";
 import SignIn from "../page/SignIn/SignIn";
+// import PersonalPage from "../page/PersonalPage/PersonalPage";
+import React from "react";
+import Loading from "../component/Loading/Loading";
+
+const LazyPersonal = React.lazy(() => import("../page/PersonalPage/PersonalPage"))
+
+const LazyHome = React.lazy(() => import("../layout/HomePage"))
+
+const LazyCart = React.lazy(() => import("../page/CartPage/CartPage"))
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />,
-    errorElement: <ErrorPage />
+    element: <React.Suspense fallback={<Loading />}><LazyHome /></React.Suspense>,
+    errorElement: <ErrorPage />,
   },
   {
-    path: "login",
+    path: "/login",
     element: <LoginPage />,
   },
   {
-    path: "cartPage",
-    element: <CartPage />,
+    path: "/cartPage",
+    element: <React.Suspense fallback={<Loading />}><LazyCart /></React.Suspense>,
   },
   {
-    path: "signIn",
+    path: "/signIn",
     element: <SignIn />
+  },
+  {
+    path: "/personalPage",
+    element: <React.Suspense fallback={<Loading />}><LazyPersonal /></React.Suspense>
   }
 ]);
 

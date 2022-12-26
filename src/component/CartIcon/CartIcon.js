@@ -5,7 +5,7 @@ import css from "./CartIcon.module.scss"
 
 export default function CartIcon() {
   return (
-    <Link to="cartPage" className={css.CartIcon}>
+    <Link to="/cartPage" className={css.CartIcon}>
         <AiOutlineShoppingCart />
         <span>0</span>
     </Link>

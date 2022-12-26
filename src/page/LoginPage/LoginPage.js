@@ -44,7 +44,7 @@ export default function LoginPage() {
   const dispatch = useDispatch();
 
   const handleSubmit = () => {
-    dispatch();
+    // dispatch();
   };
 
   console.log(formik.errors);

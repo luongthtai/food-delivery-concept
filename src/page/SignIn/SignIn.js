@@ -42,7 +42,11 @@ export default function SignIn() {
   const isLogin = useSelector((state) => state.user.login);
 
   const isLogins = () => {
-    if (formik.errors.email === undefined && formik.errors.password === undefined && formik.values.email !== "") {
+    if (
+      formik.errors.email === undefined &&
+      formik.errors.password === undefined &&
+      formik.values.email !== ""
+    ) {
       dispatch(loginUser());
     }
   };
