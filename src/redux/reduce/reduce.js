@@ -1,10 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { IoTrendingUpSharp } from "react-icons/io5";
 
 export const toggleMenu = createSlice({
   name: "toggle",
   initialState: {
-    status: IoTrendingUpSharp,
+    status: true,
   },
   reducers: {
     changeStatus: (state) => {

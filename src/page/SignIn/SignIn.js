@@ -1,30 +1,57 @@
 import React, { useState } from "react";
 import css from "./SignIn.module.scss";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-import Footer from "../../component/Footer/Footer";
 import svg from "../../assits/image/delivery.svg";
 import Logo from "../../assits/image/Logo.png";
 import PrimaryButton from "../../component/Button/PrimaryButton/PrimaryButton";
 import { Link, Navigate } from "react-router-dom";
 import { loginUser } from "../../redux/reduce/user";
 import { useDispatch, useSelector } from "react-redux";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
 export default function SignIn() {
   const [pass, setPass] = useState(false);
+
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+      password: "",
+    },
+    onSubmit: (value) => {
+      console.log(value);
+    },
+    validationSchema: Yup.object({
+      email: Yup.string()
+        .required("")
+        .matches(
+          /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
+          "Email không đúng với định dạng"
+        ),
+      password: Yup.string()
+        .required("")
+        .matches(
+          /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
+          "Tối thiểu tám ký tự, ít nhất một chữ cái, một số và một ký tự đặc biệt"
+        ),
+    }),
+  });
 
   const dispatch = useDispatch();
 
   const isLogin = useSelector((state) => state.user.login);
 
   const isLogins = () => {
-    dispatch(loginUser());
+    if (formik.errors.email === undefined && formik.errors.password === undefined && formik.values.email !== "") {
+      dispatch(loginUser());
+    }
   };
 
   return (
-    <>
+    <section id={css.signInPage}>
       {isLogin ? <Navigate to="/" /> : ""}
 
-      <section id={css.loginPage}>
+      <div id={css.loginPage}>
         <div id={css.loginContent}>
           <img src={Logo} alt="logo" id={css.logo} />
 
@@ -47,16 +74,32 @@ export default function SignIn() {
         </div>
 
         <div id={css.form}>
-          <form>
+          <form onSubmit={formik.handleSubmit}>
             <h1>ĐĂNG NHẬP</h1>
 
-            <input type="email" placeholder="Email" />
+            <div id={css.email}>
+              <input
+                type="email"
+                placeholder="Email"
+                name="email"
+                value={formik.values.email}
+                onChange={formik.handleChange}
+              />
+              {formik.errors.email && <p>{formik.errors.email}</p>}
+            </div>
 
             <div id={css.input}>
-              <input type={pass ? "text" : "password"} placeholder="Mật Khẩu" />
+              <input
+                type={pass ? "text" : "password"}
+                name="password"
+                placeholder="Mật Khẩu"
+                value={formik.values.password}
+                onChange={formik.handleChange}
+              />
               <div onClick={() => setPass(!pass)}>
                 {pass ? <AiOutlineEye /> : <AiOutlineEyeInvisible />}
               </div>
+              {formik.errors.password && <p>{formik.errors.password}</p>}
             </div>
 
             <div id={css.forgot}>
@@ -76,9 +119,7 @@ export default function SignIn() {
             </p>
           </div>
         </div>
-      </section>
-
-      {/* <Footer /> */}
-    </>
+      </div>
+    </section>
   );
 }

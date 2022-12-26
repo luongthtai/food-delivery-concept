@@ -1,12 +1,11 @@
-#loginPage {
-    height: 100vh;
-
-    display: flex;
+#login {
     padding: 5%;
-
-    // background-image: url(../../assits//image/BGLogin.png);
-
     background-color: var(--bgWeb);
+    height: 100vh;
+}
+
+#loginPage {
+    display: flex;
 
     @media only screen and (max-width: 1024px) {
         height: auto;
@@ -15,7 +14,6 @@
 
         padding: 10% 5%;
     }
-
 
     #loginContent {
         width: 50%;
@@ -72,12 +70,12 @@
 
     #form {
         width: 50%;
-        padding: 25px;
+        padding: 5% 25px;
 
         background-color: var(--white);
 
         border-radius: 20px;
-        
+
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
         @media only screen and (max-width: 1024px) {
@@ -106,11 +104,15 @@
             }
 
             #email {
-                position: absolute;
-                color: red;
-                left: 10px;
-                font-size: 12px;
-                font-weight: 700;
+                position: relative;
+
+                p {
+                    position: absolute;
+                    color: red;
+                    left: 10px;
+                    font-size: 12px;
+                    font-weight: 700;
+                }
             }
 
             #input {

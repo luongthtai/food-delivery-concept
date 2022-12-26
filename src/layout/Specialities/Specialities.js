@@ -5,14 +5,7 @@ import SecondaryButton from "../../component/Button/SecondaryButton/SecondaryBut
 import Slider from "react-slick";
 import "./slider.css";
 import SpecialitiesItem from "./components/SpecialitiesItem";
-import Bagel from "../../assits/image/bagel.svg";
-import Burger from "../../assits/image/burger.svg";
-import Chicken from "../../assits/image/chicken.svg";
-import Fish from "../../assits/image/fish.svg";
-import FishChips from "../../assits/image/fishnchips.svg";
-import Salads from "../../assits/image/vegan.svg";
-import Pizza from "../../assits/image/pizza.svg";
-import Pasta from "../../assits/image/raviolli.svg";
+import IMAGES from "../../constants/images"
 import {BsArrowRightShort, BsArrowLeftShort} from "react-icons/bs"
 
 export default function Specialities() {
@@ -96,14 +89,14 @@ export default function Specialities() {
         button={<SecondaryButton text="show all" />}
       />
       <Slider {...settings}>
-        <SpecialitiesItem svg={Bagel} text="Bagel" />
-        <SpecialitiesItem svg={Burger} text="Burger" />
-        <SpecialitiesItem svg={Chicken} text="Chicken" />
-        <SpecialitiesItem svg={Fish} text="Fish" />
-        <SpecialitiesItem svg={FishChips} text="Fish'Chips" />
-        <SpecialitiesItem svg={Salads} text="Salads" />
-        <SpecialitiesItem svg={Pizza} text="Pizza" />
-        <SpecialitiesItem svg={Pasta} text="Pasta " />
+        <SpecialitiesItem svg={IMAGES.BAGEL} text="Bagel" />
+        <SpecialitiesItem svg={IMAGES.BURGER} text="Burger" />
+        <SpecialitiesItem svg={IMAGES.CHICKEN} text="Chicken" />
+        <SpecialitiesItem svg={IMAGES.FISH} text="Fish" />
+        <SpecialitiesItem svg={IMAGES.FISHCHIPS} text="Fish'Chips" />
+        <SpecialitiesItem svg={IMAGES.SALADS} text="Salads" />
+        <SpecialitiesItem svg={IMAGES.PIZZA} text="Pizza" />
+        <SpecialitiesItem svg={IMAGES.PASTA} text="Pasta " />
       </Slider>
     </section>
   );

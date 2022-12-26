@@ -1,12 +1,19 @@
+#signInPage {
+    padding: 5%;
+    
+    background-color: var(--bgWeb);
+    
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #loginPage {
     display: flex;
-    padding: 5%;
 
-    // background-image: url(../../assits//image/BGLogin.png);
-
-    background-color: var(--bgWeb);
-
-    height: 100vh;
+    width: 100%;
 
     @media only screen and (max-width: 1024px) {
         height: auto;
@@ -50,7 +57,7 @@
             gap: 10px;
 
             div {
-                display: flex; 
+                display: flex;
                 align-items: center;
                 gap: 5px;
 
@@ -71,7 +78,7 @@
 
     #form {
         width: 50%;
-        padding: 25px;
+        padding: 5% 25px;
 
         background-color: var(--white);
 
@@ -108,7 +115,7 @@
                 line-height: 32px;
             }
 
-            #input {
+            #input, #email {
                 position: relative;
 
                 svg {
@@ -121,6 +128,14 @@
                     transform: translateY(-50%);
 
                     color: #000;
+                }
+
+                p {
+                    position: absolute;
+                    left: 10px;
+                    color: red;
+                    font-size: 12px;
+                    font-weight: 700;
                 }
             }
 
