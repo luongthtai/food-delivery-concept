@@ -11,7 +11,7 @@ export default function Nav() {
   return (
     <div className={css.nav} onClick={() => {
       dispatch(changeStatus())
-    }}> 
+    }} > 
       <AiOutlineMenu />
     </div>
   );

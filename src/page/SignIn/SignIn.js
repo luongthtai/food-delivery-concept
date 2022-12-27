@@ -25,7 +25,7 @@ export default function SignIn() {
       email: Yup.string()
         .required("")
         .matches(
-          /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
+          /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/,
           "Email không đúng với định dạng"
         ),
       password: Yup.string()

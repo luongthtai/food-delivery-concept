@@ -6,11 +6,13 @@ import storage from "redux-persist/lib/storage";
 import persistReducer from "redux-persist/es/persistReducer";
 import persistStore from "redux-persist/es/persistStore";
 import thunk from "redux-thunk";
+import { cartList } from "./reduce/cartList.js";
 
 const rootReducer = combineReducers({
   toggle: toggleMenu.reducer,
   favourite: favouriteProduct.reducer,
   user: User.reducer,
+  cart: cartList.reducer,
 });
 
 const persistConfig = {
@@ -18,11 +20,11 @@ const persistConfig = {
   storage,
 };
 
-const persistedReducer = persistReducer(persistConfig, rootReducer)
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
   reducer: persistedReducer,
-  middleware: [thunk]
+  middleware: [thunk],
 });
 
-export const persistor = persistStore(store)
+export const persistor = persistStore(store);

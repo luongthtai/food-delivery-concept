@@ -1,0 +1,121 @@
+#cartItem {
+    width: 100%;
+
+    vertical-align: middle;
+
+    @media only screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+
+        // border-bottom: 2px solid var(--grayDark);
+
+        margin-bottom: 30px;
+        // padding-bottom: 30px;
+    }
+
+    td {
+        // border: 1px solid var(--grayLight);
+        padding: 15px 0;
+
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+            padding: 5px;
+        }
+    }
+
+    #productItem {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+
+        @media only screen and (max-width: 768px) {
+            flex-direction: column;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        h3 {
+            margin: 0;
+
+            line-height: normal;
+        }
+    }
+
+    #quantity {
+        button {
+            display: inline-block;
+            cursor: pointer;
+
+            width: 30px;
+            height: 25px;
+
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+
+            border: 1px solid var(--colorTheme);
+            border-radius: 5px;
+
+            background: none;
+
+            transition: 0.1s;
+
+            &:hover {
+                background-color: var(--colorTheme);
+            }
+        }
+
+        span {
+            display: inline-block;
+
+            margin: 0 8px;
+        }
+    }
+
+    img {
+        width: auto;
+        height: auto;
+
+        border-radius: 5px;
+    }
+
+    #button {
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+
+        // gap: 10px;
+        text-align: center;
+
+        button {
+            cursor: pointer;
+
+            width: 30px;
+            height: 25px;
+
+            margin: 0 auto;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: var(--heartColor);
+
+            border-radius: 5px;
+            border: none;
+
+            transition: 0.2s;
+
+            svg {
+                color: var(--white);
+            }
+
+            &:hover {
+                transform: scale(1.4);
+            }
+        }
+    }
+}

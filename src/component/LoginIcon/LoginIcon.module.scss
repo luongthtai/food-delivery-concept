@@ -17,7 +17,7 @@
     }
     &:hover {
         span {
-            display: none;
+            visibility: hidden;
         }
         
         svg {
@@ -30,6 +30,8 @@
 
             background-color: var(--colorTheme);
             color: var(--garyLight);
+
+            transform: translateX(110%);
         }
     }
 }

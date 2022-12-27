@@ -1,0 +1,123 @@
+#cartPage {
+    padding: 5%;
+
+    text-align: center;
+
+    @media only screen and (max-width: 768px) {
+        padding: 2%;
+    }
+
+    #cartContents {
+        #error {
+            // color: var(--colorTheme);
+            // font-size: px;
+            margin-top: 20px;
+        }
+    }
+
+    #cartLists {
+        width: 100%;
+
+        border-bottom: 2px solid var(--grayLight);
+        padding: 10px 0 30px;
+
+        th {
+            border: 1px solid var(--grayLight);
+        }
+
+        thead {
+            @media only screen and (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        tbody {
+            @media only screen and (max-width: 768px) {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    #total {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        padding-bottom: 5%;
+
+        @media only screen and (max-width: 430px) {
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 30px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 700;
+
+            display: flex;
+            gap: 10px;
+
+            color: #000;
+
+            transition: 0.1s;
+
+            svg {
+                transition: 0.1s;
+                transform: translateY(6px);
+                color: #000;
+            }
+
+            &:hover {
+                color: var(--colorTheme);
+                text-decoration: underline;
+
+                animation: effect .2s;
+
+                svg {
+                    color: var(--colorTheme);
+                }
+            }
+
+            @keyframes effect {
+                0% {
+                    transform: translateX(0);
+                }
+
+                40% {
+                    transform: translateX(-20px);
+                }
+
+                100% {
+                    transform: translateX(0);
+                }
+            }
+        }
+
+        #subTotal {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 20px;
+
+            padding-top: 30px;
+
+            @media only screen and (max-width: 430px) {
+                align-items: center;
+
+                width: 100%;
+            }
+
+            h3 {
+                margin: 0;
+            }
+
+            #price {
+                font-size: 30px;
+                font-weight: 700;
+            }
+        }
+    }
+}

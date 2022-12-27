@@ -5,7 +5,7 @@ import svg from "../../assits/image/delivery.svg";
 import PrimaryButton from "../../component/Button/PrimaryButton/PrimaryButton";
 import { Link } from "react-router-dom";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-import { useDispatch } from "react-redux";
+// import { useDispatch } from "react-redux";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
@@ -26,7 +26,7 @@ export default function LoginPage() {
       email: Yup.string()
         .required("")
         .matches(
-          /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
+          /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/,
           "Email không đúng với định dạng"
         ),
       password: Yup.string()
@@ -41,13 +41,13 @@ export default function LoginPage() {
     }),
   });
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const handleSubmit = () => {
     // dispatch();
   };
 
-  console.log(formik.errors);
+  // console.log(formik.errors);
 
   return (
     <section id={css.login}>
