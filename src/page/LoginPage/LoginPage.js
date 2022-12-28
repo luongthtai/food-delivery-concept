@@ -119,7 +119,7 @@ export default function LoginPage() {
               {formik.errors.configPass && <p>{formik.errors.configPass}</p>}
             </div>
 
-            <div id={css.check}>
+            <div id={css.checkbox}>
               <input type="checkbox" id="check" name="checked" onChange={formik.handleChange}/>
               <label htmlFor="check">
                 Tôi đã đọc và đồng ý với các{" "}

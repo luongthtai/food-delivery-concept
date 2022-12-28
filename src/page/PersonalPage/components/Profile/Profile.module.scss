@@ -1,0 +1,25 @@
+#profile {
+    padding: 0 5%;
+
+    width: 100%;
+
+    form {
+        #contentTop {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #gender {
+            display: flex;
+            align-items: center;
+
+            p {
+                margin: 0;
+            }
+
+            input {
+                transform: translateY(-2px);
+            }
+        }
+    }
+}

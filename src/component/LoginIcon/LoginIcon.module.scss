@@ -5,23 +5,28 @@
     gap: 8px;
 
     width: 110px;
-    
+
     text-decoration: none;
 
     color: var(--graySecond);
 
-    transition: .3s;
-    
+    transition: 0.3s;
+
     @media only screen and (max-width: 430px) {
-        width: auto;                
+        width: auto;
+
+        span {
+            display: none;
+        }
     }
+
     &:hover {
         span {
             visibility: hidden;
         }
-        
+
         svg {
-            transition: .4s;
+            transition: 0.4s;
 
             width: 30px;
             height: 30px;
@@ -32,6 +37,10 @@
             color: var(--garyLight);
 
             transform: translateX(110%);
+
+            @media only screen and (max-width: 430px) {
+                transform: translateX(10px);
+            }
         }
     }
 }

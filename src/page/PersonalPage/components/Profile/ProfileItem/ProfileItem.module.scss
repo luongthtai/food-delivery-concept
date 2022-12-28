@@ -1,0 +1,27 @@
+#profileItem {
+    display: flex;
+    gap: 30px;
+
+    p {
+        &:nth-child(1) {
+            width: 40%;
+
+            color: var(--grayLight);
+            text-align: end;
+        }
+
+        &:nth-child(2) {
+            width: 60%;
+
+            text-align: start;
+        }
+
+        span {
+            cursor: pointer;
+
+            font-size: 12px;
+            color: var(--heartColor);
+            text-decoration: underline;
+        }
+    }
+}

@@ -16,7 +16,7 @@ export default function Header() {
       <div className={css.listPage}>
         <LoginIcon />
         <CartIcon />
-        <Nav />
+        {/* <Nav /> */}
       </div>
     </header>
   );
