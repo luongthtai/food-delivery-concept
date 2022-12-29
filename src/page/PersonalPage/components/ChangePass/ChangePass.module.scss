@@ -1,0 +1,53 @@
+#changePass {
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        padding-top: 30px;
+
+        border-top: 1px solid var(--grayLight);
+
+        div {
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            // flex-direction: column;
+
+            position: relative;
+            
+            @media only screen and (max-width: 430px) {
+                gap: 10px;
+            }
+
+            label {
+                width: 30%;
+                color: var(--grayLight);
+            }
+
+            input {
+                width: 70%;
+
+                padding: 8px 15px;
+
+                border: 1px solid var(--grayLight);
+                border-radius: 8px;
+
+                outline: none;
+            }
+
+            p {
+                position: absolute;
+                bottom: -25px;
+                left: 5px;
+
+                font-size: 10px;
+                font-weight: 800;
+
+                color: var(--heartColor);
+            }
+        }
+    }
+}

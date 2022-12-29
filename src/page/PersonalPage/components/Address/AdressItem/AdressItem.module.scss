@@ -1,0 +1,54 @@
+#addressItem {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    #intr {
+        #user {
+            display: flex;
+
+            #name,
+            #phoneNumber {
+                font-weight: bold;
+                font-size: 18px;
+            }
+
+            #name {
+                padding-right: 10px;
+                border-right: 1px solid var(--grayLight);
+            }
+
+            #phoneNumber {
+                padding-left: 10px;
+            }
+        }
+
+        #address {
+            padding-top: 10px;
+
+            p {
+                color: var(--grayLight);
+                font-size: 20px;
+            }
+        }
+    }
+
+    #setting {
+        div {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+
+            p {
+                cursor: pointer;
+                text-decoration: underline;
+                color: var(--heartColor);
+            }
+        }
+
+        @media only screen and (max-width: 430px) {
+            display: none;
+        }
+    }
+}

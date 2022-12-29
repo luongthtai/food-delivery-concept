@@ -1,24 +1,140 @@
 #profile {
-    padding: 0 5%;
-
     width: 100%;
 
     form {
         #contentTop {
             display: flex;
             justify-content: space-between;
+
+            border-top: 1px solid var(--grayLight);
+
+            padding-top: 30px;
+
+            @media only screen and (max-width: 430px) {
+                flex-direction: column-reverse;
+                gap: 20px;
+            }
+
+            #contentLeft {
+                width: 70%;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+                gap: 20px;
+
+                @media only screen and (max-width: 430px) {
+                    width: 100%;
+                }
+
+                #gender {
+                    p {
+                        width: 25%;
+                        color: var(--grayLight);
+                        text-align: end;
+                    }
+
+                    #inputs {
+                        width: 75%;
+
+                        display: flex;
+                        gap: 15px;
+
+                        @media only screen and (max-width: 430px) {
+                            width: 70%;   
+                            justify-content: center;
+                        }
+
+                        label {
+                            padding-left: 4px;
+                        }
+
+                        input {
+                            transform: translateY(1px);
+                        }
+                    }
+                }
+            }
+
+            #contentRight {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+
+                width: 30%;
+
+                border-left: 1px solid var(--grayLight);
+
+                @media only screen and (max-width: 430px) {
+                    width: 100%;  
+                    
+                    border: none;
+                }
+
+                #avatar {
+                    position: relative;
+
+                    #icon {
+                        position: absolute;
+                        bottom: 10px;
+                        right: 10px;
+
+                        width: 25px;
+                        height: 25px;
+                        background-color: #fff;
+
+                        border-radius: 50%;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    svg {
+                        color: #43a12b;
+                    }
+                }
+            }
         }
 
-        #gender {
+        #gender,
+        #date {
             display: flex;
             align-items: center;
+            gap: 20px;
 
             p {
                 margin: 0;
-            }
 
-            input {
-                transform: translateY(-2px);
+                @media only screen and (max-width: 430px) {
+                    text-align: start !important;
+                }
+            }
+        }
+
+        #date {
+            padding-top: 15px;
+
+            p {
+                width: 16.9%;
+                color: var(--grayLight);
+                text-align: end;
+
+                @media only screen and (max-width: 430px) {
+                    width: 30%;           
+                }
+            }
+        }
+
+        #submit {
+            width: 100%;
+            padding: 30px 0 30px 19.4%;
+
+            @media only screen and (max-width: 430px) {
+                padding: 30px 0 10px;
             }
         }
     }

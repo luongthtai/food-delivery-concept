@@ -7,7 +7,7 @@ export default function LoginIcon() {
   return (
     <Link to="/personalPage" className={css.login}>
       <HiOutlineUser />
-      <span>User</span>
+      <span>{true && "User"}</span>
     </Link>
   );
 }

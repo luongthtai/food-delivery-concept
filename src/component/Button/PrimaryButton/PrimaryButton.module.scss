@@ -13,6 +13,8 @@
     cursor: pointer;
     transition: 0.1s;
 
+    white-space: nowrap;
+
     @media only screen and (max-width: 430px) {
         width: 100%;
         
