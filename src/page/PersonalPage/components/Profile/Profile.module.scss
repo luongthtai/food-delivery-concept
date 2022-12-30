@@ -77,6 +77,10 @@
                 #avatar {
                     position: relative;
 
+                    img {
+                        border-radius: 50%;
+                    }
+
                     #icon {
                         position: absolute;
                         bottom: 10px;

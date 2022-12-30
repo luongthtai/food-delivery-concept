@@ -4,8 +4,8 @@ import TitleSection from "../../../../component/TitleSection/TitleSection";
 import ProfileItem from "./ProfileItem/ProfileItem";
 import PrimaryButton from "../../../../component/Button/PrimaryButton/PrimaryButton";
 import { BsInstagram } from "react-icons/bs";
-import avatar from "../../../../assits/image/avatar.png";
 import DatePicker from "react-date-picker";
+import emptyAvatar from "../../../../assits/image/emptyAvatar.jpg"
 
 export default function Profile() {
   const [value, onChange] = useState(new Date());
@@ -41,7 +41,7 @@ export default function Profile() {
 
           <div id={css.contentRight}>
             <div id={css.avatar}>
-              <img src={avatar} alt="avatar" width="108px" height="108px" />
+              <img src={emptyAvatar} alt="avatar" width="108px" height="108px" />
               <div id={css.icon}>
                 <BsInstagram />
               </div>

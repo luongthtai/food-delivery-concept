@@ -14,6 +14,9 @@ const LazyHome = React.lazy(() => import("../layout/HomePage"))
 
 const LazyCart = React.lazy(() => import("../page/CartPage/CartPage"))
 
+const CheckOut = React.lazy(() => import("../page/Checkout/Checkout.js"))
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -35,6 +38,10 @@ const router = createBrowserRouter([
   {
     path: "/personalPage",
     element: <React.Suspense fallback={<Loading />}><LazyPersonal /></React.Suspense>
+  },
+  {
+    path: "/checkout",
+    element: <React.Suspense fallback={<Loading />}><CheckOut /></React.Suspense>,
   }
 ]);
 

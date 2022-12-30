@@ -12,6 +12,8 @@ export default function Address() {
       <div id={css.content}>
         <div id={css.addressLists}>
           <AdressItem />
+          <AdressItem />
+          <AdressItem />
         </div>
         <PrimaryButton
           bgColor="var(--white)"

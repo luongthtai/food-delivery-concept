@@ -1,0 +1,169 @@
+#root {
+    padding: 5%;
+
+    background-color: var(--bgWeb);
+
+    #titlePage {
+        color: var(--greenColor);
+        font-weight: 700;
+        text-align: center;
+    }
+
+    #checkout {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        #address,
+        #products,
+        #totals {
+            padding: 2% 5% 5%;
+
+            background-color: var(--white);
+
+            border-radius: 8px;
+            box-shadow: 0px 2px 22px rgb(60 62 74 / 45%);
+        }
+
+        #address {
+            #info {
+                border-top: 1px solid var(--grayLight);
+                padding: 30px 5% 0;
+
+                #name,
+                #phone {
+                    width: 50%;
+                    display: inline-block;
+
+                    @media only screen and (max-width: 768px) {
+                        width: 100%;
+                    }
+                }
+
+                #loct {
+                    width: 100%;
+                }
+
+                #name,
+                #phone,
+                #loct {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    @media only screen and (max-width: 430px) {
+                        flex-direction: column;
+                        text-align: center;
+                        gap: 0px;
+                    }
+                }
+            }
+        }
+
+        .title {
+            color: var(--greenColor);
+            font-weight: 700;
+        }
+
+        .content {
+            font-weight: 600;
+        }
+
+        .setting {
+            color: var(--heartColor);
+            font-size: 12px;
+            text-decoration: underline;
+
+            cursor: pointer;
+
+            @media only screen and (max-width: 430px) {
+                display: none;
+            }
+        }
+
+        #products {
+            #productsList {
+                padding: 30px 5% 0;
+                border-top: 1px solid var(--grayLight);
+
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+            }
+        }
+
+        #totals {
+            #totalList {
+                padding: 30px 5% 0;
+                border-top: 1px solid var(--grayLight);
+                
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                #payment {
+                    display: flex;
+                    flex-direction: column;
+
+                    label {
+                        padding-left: 10px;
+                    }
+                }
+
+                #total {
+                    border-top: 1px solid var(--grayLight);
+
+                    padding-top: 30px;
+
+                    display: flex;
+                    flex-direction: column;
+                    text-align: end;
+
+                    @media only screen and (max-width: 768px) {
+                        text-align: start;
+                    }
+
+                    .title {
+                        display: inline-block;
+                        width: 15%;
+                        text-align: start;
+                        
+                        @media only screen and (max-width: 768px) {
+                            width: 50%;
+                        }
+                    }
+
+                    .content {
+                        display: inline-block;
+                        width: 10%;
+                        text-align: end;
+
+                        @media only screen and (max-width: 768px) {
+                            width: auto;
+                        }
+
+                        @media only screen and (max-width: 430px) {
+                            width: 50%;
+                        }
+                    }
+
+                    #sumTotal {
+                    border-top: 1px solid var(--grayLight);
+
+                    margin-top: 10px;
+                    padding-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    #button {
+        width: 100%;
+        text-align: center;
+
+        margin-top: 30px;
+    }
+}

@@ -8,8 +8,8 @@ import { Link } from "react-router-dom";
 import PrimaryButton from "../../component/Button/PrimaryButton/PrimaryButton";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { useSelector } from "react-redux";
-import product2 from "../../assits/image/product2.png"
-import product3 from "../../assits/image/product3.png"
+import product2 from "../../assits/image/product2.png";
+import product3 from "../../assits/image/product3.png";
 
 export default function CartPage() {
   const handleSubmit = () => {
@@ -42,14 +42,14 @@ export default function CartPage() {
               </thead>
               <tbody>
                 <CartItem />
-                <CartItem img={product2}/>
-                <CartItem img={product3}/>
+                <CartItem img={product2} />
+                <CartItem img={product3} />
               </tbody>
             </table>
           )}
 
           <div id={css.total}>
-            <Link to="/shopping">
+            <Link to="/shopping" id={css.goback}>
               <AiOutlineArrowLeft />
               <span>Continue Shopping</span>
             </Link>
@@ -58,11 +58,13 @@ export default function CartPage() {
               <h3>Subtotal:</h3>
               <p id={css.price}>$00.00</p>
 
-              <PrimaryButton
-                text="Checkout"
-                padding="10px 24px"
-                submit={handleSubmit}
-              />
+              <Link to="/checkout">
+                <PrimaryButton
+                  text="Checkout"
+                  padding="10px 24px"
+                  submit={handleSubmit}
+                />
+              </Link>
             </div>
           </div>
         </div>

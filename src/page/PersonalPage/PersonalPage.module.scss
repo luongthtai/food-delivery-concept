@@ -152,7 +152,7 @@
                     margin: 0;
                 }
 
-                @media only screen and (max-width: 430px) {
+                @media only screen and (max-width: 576px) {
                     display: none;
                 }
             }
@@ -191,7 +191,11 @@
     }
 
     #signOutHide {
-        @media only screen and (min-width: 430px) {
+        width: 100%;
+
+        text-align: end;
+
+        @media only screen and (min-width: 577px) {
             display: none;
         }
     }
